@@ -1,0 +1,17 @@
+<h1> Lista de productos..</h1>
+<div>
+  <mat-nav-list>
+    <mat-list-item *ngFor="let producto of (productos$ | async)" [routerLink]="[producto.id]">
+      <span matLine layout>
+        <span>{{producto.descripcion}}</span>
+        <span flex></span>
+        <span>{{producto.clave}}</span>
+      </span>
+      <span matLine layout>
+        <span flex></span>
+        <span>{{producto.id}}</span>
+      </span>
+      <p matLine>{{producto.clave}}</p>
+    </mat-list-item>
+  </mat-nav-list>
+</div>
